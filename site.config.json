@@ -1,0 +1,53 @@
+{
+  "business": {
+    "name": "Smoky Mountain Espresso",
+    "legalName": "Smoky Mountain Espresso Coffee & Tea",
+    "type": "CafeOrCoffeeShop",
+    "founded": "2018",
+    "owners": "Michael and Karen Williams",
+    "coffeeRoaster": "Crimson Cup Coffee & Tea (Columbus, Ohio)"
+  },
+  "domain": "https://www.smokymountainespresso.com",
+  "domainNote": "TODO: confirm the real domain with the client before launch, then find/replace across all files. Note: smokymountainespresso.shop appears to be an unaffiliated scraper site.",
+  "nap": {
+    "phoneDisplay": "(865) 366-1685",
+    "phoneTel": "+18653661685",
+    "street": "1259 Middle Creek Rd",
+    "city": "Sevierville",
+    "state": "TN",
+    "zip": "37862",
+    "addressLine": "1259 Middle Creek Rd, Sevierville, TN 37862"
+  },
+  "email": "TODO: get business email from client (used for form notifications only)",
+  "hours": {
+    "display": [
+      ["Monday – Thursday", "7:30 AM – 9:00 PM"],
+      ["Friday – Saturday", "7:30 AM – 9:30 PM"],
+      ["Sunday", "1:00 PM – 9:00 PM"]
+    ],
+    "schema": [
+      { "days": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "07:30", "closes": "21:00" },
+      { "days": ["Friday", "Saturday"], "opens": "07:30", "closes": "21:30" },
+      { "days": ["Sunday"], "opens": "13:00", "closes": "21:00" }
+    ],
+    "note": "TODO: hours pulled from public listings July 2026 — confirm with client; listings warn hours can shift seasonally."
+  },
+  "links": {
+    "facebook": "https://www.facebook.com/smespresso/",
+    "instagram": "https://www.instagram.com/smespresso/",
+    "doordash": "https://www.doordash.com/store/smoky-mountain-espresso-sevierville-30429526",
+    "mapsQuery": "https://www.google.com/maps/search/?api=1&query=Smoky+Mountain+Espresso+1259+Middle+Creek+Rd+Sevierville+TN+37862",
+    "reviewLink": "TODO: replace with the client's direct Google review link (g.page/r/... from their Business Profile)"
+  },
+  "form": {
+    "provider": "formspree",
+    "endpoint": "TODO: create a free Formspree form (formspree.io), paste the endpoint URL into contact/index.html, or swap in Coraline embed if this client is on Coraline"
+  },
+  "proofPoints": {
+    "googleRating": "4.6 stars on Google",
+    "fiveStarReviews": "800+ five-star Google reviews",
+    "facebookRecommend": "98% recommend on Facebook (405 reviews)",
+    "tripadvisor": "#2 of 13 coffee and tea spots in Sevierville on Tripadvisor",
+    "note": "Figures gathered from public listings July 2026 — refresh before major updates."
+  }
+}

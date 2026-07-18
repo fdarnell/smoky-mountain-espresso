@@ -263,10 +263,26 @@ HOME_BODY = f"""<section class="hero">
 </section>
 {RIDGE.format(cls="")}
 <section class="section">
-  <div class="wrap wrap-narrow">
-    <h2>Coffee first, everything else second</h2>
-    <p>Michael and Karen Williams opened this shop in 2018 with zero coffee-industry experience and a stubborn idea about how a coffee shop should feel. Eight years on, Smoky Mountain Espresso has racked up more than 800 five-star Google reviews and sits near the top of every coffee ranking in Sevier County.</p>
-    <p>The espresso itself comes from <a href="/about/">Crimson Cup Coffee &amp; Tea</a>, an award-winning Ohio roaster, and it's pulled all day long — hot, iced, frozen, or on nitro tap. If you don't see what you want on the board, ask. The crew builds custom drinks constantly.</p>
+  <div class="wrap split">
+    <div>
+      <h2>Coffee first, everything else second</h2>
+      <p>Michael and Karen Williams opened this shop in 2018 with zero coffee-industry experience and a stubborn idea about how a coffee shop should feel. Eight years on, Smoky Mountain Espresso has racked up more than 800 five-star Google reviews and sits near the top of every coffee ranking in Sevier County.</p>
+      <p>The espresso itself comes from <a href="/about/">Crimson Cup Coffee &amp; Tea</a>, an award-winning Ohio roaster, and it's pulled all day long — hot, iced, frozen, or on nitro tap. If you don't see what you want on the board, ask. The crew builds custom drinks constantly.</p>
+    </div>
+    <figure class="figure model-figure">
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.2.0/dist/model-viewer.min.js"></script>
+      <model-viewer
+        src="/models/smoky-espresso-cup-web.glb"
+        alt="A Smoky Mountain Espresso cup in 3D — drag to rotate, or tap the AR button to see it on your own table"
+        camera-controls
+        auto-rotate
+        touch-action="pan-y"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        shadow-intensity="1"
+        loading="lazy"></model-viewer>
+      <figcaption>Give the cup a spin — drag to rotate, pinch to zoom, or tap the cube to set it on your own table in AR.</figcaption>
+    </figure>
   </div>
 </section>
 <section class="section section-tint">

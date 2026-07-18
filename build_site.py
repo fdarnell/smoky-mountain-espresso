@@ -263,28 +263,45 @@ HOME_BODY = f"""<section class="hero">
 </section>
 {RIDGE.format(cls="")}
 <section class="section">
-  <div class="wrap split">
-    <div>
-      <h2>Coffee first, everything else second</h2>
-      <p>Michael and Karen Williams opened this shop in 2018 with zero coffee-industry experience and a stubborn idea about how a coffee shop should feel. Eight years on, Smoky Mountain Espresso has racked up more than 800 five-star Google reviews and sits near the top of every coffee ranking in Sevier County.</p>
-      <p>The espresso itself comes from <a href="/about/">Crimson Cup Coffee &amp; Tea</a>, an award-winning Ohio roaster, and it's pulled all day long — hot, iced, frozen, or on nitro tap. If you don't see what you want on the board, ask. The crew builds custom drinks constantly.</p>
-    </div>
-    <figure class="figure model-figure">
-      <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.2.0/dist/model-viewer.min.js"></script>
-      <model-viewer
-        src="/models/smoky-espresso-cup-web.glb"
-        alt="A Smoky Mountain Espresso cup in 3D — drag to rotate, or tap the AR button to see it on your own table"
-        camera-controls
-        auto-rotate
-        touch-action="pan-y"
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        shadow-intensity="1"
-        loading="lazy"></model-viewer>
-      <figcaption>Give the cup a spin — drag to rotate, pinch to zoom, or tap the cube to set it on your own table in AR.</figcaption>
-    </figure>
+  <div class="wrap wrap-narrow">
+    <h2>Coffee first, everything else second</h2>
+    <p>Michael and Karen Williams opened this shop in 2018 with zero coffee-industry experience and a stubborn idea about how a coffee shop should feel. Eight years on, Smoky Mountain Espresso has racked up more than 800 five-star Google reviews and sits near the top of every coffee ranking in Sevier County.</p>
+    <p>The espresso itself comes from <a href="/about/">Crimson Cup Coffee &amp; Tea</a>, an award-winning Ohio roaster, and it's pulled all day long — hot, iced, frozen, or on nitro tap. If you don't see what you want on the board, ask. The crew builds custom drinks constantly.</p>
   </div>
 </section>
+<section class="cup-band" id="cup-band" aria-label="Interactive 3D espresso cup">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.2.0/dist/model-viewer.min.js"></script>
+  <model-viewer
+    src="/models/smoky-espresso-cup-web.glb"
+    ios-src="/models/smoky-espresso-cup-web.usdz"
+    alt="A Smoky Mountain Espresso cup in 3D — it spins as you scroll; drag to rotate, or tap the AR button to see it on your own table"
+    camera-orbit="0deg 75deg 105%"
+    camera-controls
+    disable-zoom
+    touch-action="pan-y"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    shadow-intensity="1"
+    loading="lazy"></model-viewer>
+  <p class="cup-band-hint">Scroll to spin the cup — or drag it, and tap the cube to set it on your own table in AR.</p>
+</section>
+<script>
+(function () {{
+  var band = document.getElementById('cup-band');
+  var mv = band.querySelector('model-viewer');
+  var ticking = false;
+  window.addEventListener('scroll', function () {{
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {{
+      var r = band.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (window.innerHeight - r.top) / (window.innerHeight + r.height)));
+      mv.cameraOrbit = (p * 360).toFixed(1) + 'deg 75deg 105%';
+      ticking = false;
+    }});
+  }}, {{ passive: true }});
+}})();
+</script>
 <section class="section section-tint">
   <div class="wrap">
     <h2>What people drive across Sevier County for</h2>

@@ -339,6 +339,13 @@ address { font-style: normal; }
 .footer-social { margin-top: 0.8rem; }
 .footer-note { font-size: 0.95rem; }
 .footer-bottom { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(234, 217, 195, 0.2); font-size: 0.85rem; color: #c8a97e; }
+.footer-legal { margin-top: 0.35rem; }
+
+/* ---------- legal pages ---------- */
+.legal-body h2 { margin-top: 2.2rem; }
+.legal-body h2:first-child { margin-top: 0; }
+.legal-body ul { padding-left: 1.3rem; margin-bottom: 1rem; }
+.legal-body li { margin-bottom: 0.4rem; }
 
 /* ---------- mobile call bar ---------- */
 .mobile-bar { display: none; }

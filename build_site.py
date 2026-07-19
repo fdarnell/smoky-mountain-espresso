@@ -162,7 +162,10 @@ FOOTER = f"""</main>
       <p class="footer-note">Reviews from regulars are how new folks find us. <a href="{MAPS}" rel="noopener">Leave us a Google review</a> — it means more than you'd think.</p>
     </div>
   </div>
-  <div class="wrap footer-bottom"><p>&copy; 2026 Smoky Mountain Espresso · {ADDR}</p></div>
+  <div class="wrap footer-bottom">
+    <p>&copy; 2026 Smoky Mountain Espresso · {ADDR}</p>
+    <p class="footer-legal"><a href="/privacy-policy/">Privacy policy</a> · <a href="/terms-of-service/">Terms of service</a> · <a href="/accessibility/">Accessibility</a></p>
+  </div>
 </footer>
 <div class="mobile-bar">
   <a href="tel:{TEL}">{I_PHONE}<span>Call</span></a>
@@ -628,6 +631,110 @@ CONTACT_BODY = f"""<section class="page-head">
 </section>
 """ + faq_html("Visiting questions", CONTACT_FAQ)
 
+# ------ legal pages
+# Facts these pages are written around (re-check on every site change — see PHOTOS.md
+# pattern): contact form collects name/phone/message (endpoint not yet wired — when it
+# goes live on Formspree or Coraline/LeadConnector, NAME the processor below and bump
+# the effective date); jsDelivr CDN serves the 3D viewer script on the home page;
+# Google Maps loads only when tapped on /contact/; hosting is Vercel; fonts self-hosted;
+# NO analytics, ad pixels, ecommerce, accounts, or UGC. If any of that changes,
+# update these pages and re-evaluate the cookie-banner answer (currently: not needed).
+LEGAL_DATE = "July 19, 2026"
+
+PRIVACY_BODY = f"""<section class="page-head">
+  <div class="wrap wrap-narrow">
+    <h1>Privacy policy</h1>
+    <p class="lede">Effective {LEGAL_DATE}. The short version: we collect very little, we don't sell anything about you, and most of what we know about our customers we learned across the counter.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap wrap-narrow legal-body">
+    <h2>Who we are</h2>
+    <p>Smoky Mountain Espresso is a family-owned coffee shop at {ADDR}, phone {PHONE}. This policy covers our website; it doesn't change anything about ordering a latte in person.</p>
+    <h2>Information you give us</h2>
+    <p>If you use the contact form on our <a href="/contact/">Visit us</a> page, we receive the name, phone number, and message you type. If you call us or message us on Facebook, we see what you send there. That's it — the site has no accounts, no ordering, and no newsletter signup.</p>
+    <p>Contact form submissions are delivered to us by a form-processing service acting on our behalf, which stores them so we can reply.</p>
+    <h2>Information collected automatically</h2>
+    <p>Like nearly every website, our hosting provider (Vercel) keeps standard server logs — IP address, pages requested, browser type, and timestamps — used for security and keeping the site running. The interactive 3D coffee cup on our home page loads from a content-delivery network (jsDelivr), which receives the same standard request data when your browser fetches it. The map on the Visit us page loads from Google <em>only if you tap the "Load interactive map" button</em>; until then, Google gets nothing from your visit.</p>
+    <p>We do not run analytics trackers, advertising pixels, or retargeting on this site.</p>
+    <h2>Text messaging (SMS)</h2>
+    <p>If you give us your phone number, we may call or text you back about your question. Message frequency varies; message and data rates may apply. Reply STOP to opt out, HELP for help. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Opt-in data and consent are not shared with any third party.</p>
+    <h2>How we share information</h2>
+    <p>We do not sell personal information, and we don't share it for marketing. The only parties that touch website data are the service providers named above — our hosting provider and our form-processing service — acting on our instructions, plus anyone the law genuinely requires us to answer to.</p>
+    <h2>Cookies</h2>
+    <p>This site does not set advertising or analytics cookies. If our contact form provider sets a small functional cookie to make the form work, that's the extent of it. There's nothing here that needs a cookie banner, so we don't show one.</p>
+    <h2>Retention and security</h2>
+    <p>We keep contact messages as long as we need them to help you, then delete them in the ordinary course. We use reasonable safeguards to protect information in our care, but no website can promise absolute security, and we won't pretend otherwise.</p>
+    <h2>Children</h2>
+    <p>Our shop is family-friendly; our website is a general-audience site and is not directed to children under 13. We don't knowingly collect personal information from children online. If you believe a child has sent us information, call us and we'll delete it.</p>
+    <h2>Your choices and rights</h2>
+    <p>Want to know what we have about you, or want it deleted? Call {PHONE} or send a note to {ADDR}. We honor these requests for everyone, regardless of which state you live in.</p>
+    <h2>Links to other sites</h2>
+    <p>We link out to Facebook, Instagram, DoorDash, and Google Maps. Those services have their own privacy practices, and what happens there is governed by their policies, not this one.</p>
+    <h2>Changes and contact</h2>
+    <p>If we change this policy, we'll update it here and change the effective date at the top. Questions? Call {PHONE}, or just ask at the counter.</p>
+  </div>
+</section>
+"""
+
+TERMS_BODY = f"""<section class="page-head">
+  <div class="wrap wrap-narrow">
+    <h1>Terms of service</h1>
+    <p class="lede">Effective {LEGAL_DATE}. Using this website means you accept these terms. They're short, because this is a coffee shop's website, not a software license.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap wrap-narrow legal-body">
+    <h2>What this site is</h2>
+    <p>This website tells you about Smoky Mountain Espresso — our menu, hours, location, and story. It's informational. Menu items, prices, and hours can change without notice (especially seasonally); the board and register at {ADDR} are the final word on what's available and what it costs today.</p>
+    <h2>Ordering and delivery</h2>
+    <p>We don't sell anything through this website. Delivery orders go through DoorDash, a separate company with its own terms, prices, and policies — your DoorDash order is a contract between you and DoorDash under their terms.</p>
+    <h2>Our content</h2>
+    <p>The text, photos, and design of this site belong to Smoky Mountain Espresso. Please don't republish them as your own. Third-party names and logos that appear here — sweetFrog, Crimson Cup Coffee &amp; Tea, Crust &amp; Crumb Bakery, DoorDash, Google — belong to their respective owners and appear only to describe who we work with.</p>
+    <h2>Acceptable use</h2>
+    <p>Don't attempt to break, overload, scrape at abusive volume, or misuse this website, and don't use our contact form to send spam or anything unlawful. That's the whole list.</p>
+    <h2>No warranties</h2>
+    <p>The site is provided "as is." We work to keep the information accurate and the site available, but we don't warrant that it will always be current, error-free, or uninterrupted.</p>
+    <h2>Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, Smoky Mountain Espresso's total liability arising out of your use of this website will not exceed one hundred dollars ($100). Nothing in these terms limits liability that can't legally be limited.</p>
+    <h2>Indemnification</h2>
+    <p>If you misuse the site in a way that gets us dragged into a claim, you agree to cover the costs of that claim.</p>
+    <h2>Governing law — and a request</h2>
+    <p>These terms are governed by Tennessee law, and any dispute belongs in the state or federal courts serving Sevier County, Tennessee. Before it comes to that: call us. {PHONE}. Nearly everything is fixable over a phone call, and we'd rather fix it than litigate it.</p>
+    <h2>Changes, severability, contact</h2>
+    <p>We may update these terms by posting a new version here with a new effective date. If part of these terms turns out to be unenforceable, the rest still stands. Questions go to {PHONE} or {ADDR}.</p>
+  </div>
+</section>
+"""
+
+A11Y_BODY = f"""<section class="page-head">
+  <div class="wrap wrap-narrow">
+    <h1>Accessibility statement</h1>
+    <p class="lede">Everyone's welcome in the shop, and we want the website to work the same way. Last reviewed {LEGAL_DATE}.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap wrap-narrow legal-body">
+    <h2>Our commitment</h2>
+    <p>We aim for the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA on this site, and we treat that as ongoing work rather than a one-time checkbox.</p>
+    <h2>What's built in</h2>
+    <ul>
+      <li>Semantic headings and landmarks, plus a skip-to-content link on every page.</li>
+      <li>Full keyboard operability with visible focus outlines.</li>
+      <li>Descriptive alt text on photographs; decorative duplicates are hidden from screen readers.</li>
+      <li>High color contrast between text and backgrounds throughout.</li>
+      <li>Motion respect: if your device is set to reduce motion, the site's animations — the hero zoom, the scrolling photo strip, scroll-reveal effects — switch off or become static.</li>
+      <li>Responsive layout that works from small phones (320px) up, with no horizontal scrolling.</li>
+      <li>Self-hosted fonts, no autoplaying audio or video.</li>
+    </ul>
+    <h2>Known limitations</h2>
+    <p>A few pieces come from third parties and aren't fully under our control: the Google map on the Visit us page (it loads only when you choose to open it, and written directions are always available by phone), the interactive 3D coffee cup on the home page (it's decorative — every piece of information it conveys is also in regular text), and the contact form's processing service. If any of these blocks you, the phone works for everything: {PHONE}.</p>
+    <h2>Found a barrier?</h2>
+    <p>If something on this site is hard to use with your assistive technology, please tell us — call {PHONE} or ask for the owner at the shop. We'll fix what we can promptly, and in the meantime we'll get you whatever information the page was supposed to provide.</p>
+  </div>
+</section>
+"""
+
 # ---------------------------------------------------------------- specs
 PAGES = [
     {
@@ -699,6 +806,36 @@ PAGES = [
         "crumbs": [["Home", "/"], ["Visit us", "/contact/"]],
         "body": CONTACT_BODY,
     },
+    {
+        "path": "/privacy-policy/",
+        "nav": "",
+        "title": "Privacy Policy | Smoky Mountain Espresso",
+        "desc": "How Smoky Mountain Espresso handles website information: what the contact form collects, what our host logs, and the short list of services involved.",
+        "jsonld": [],
+        "crumbs": [["Home", "/"], ["Privacy policy", "/privacy-policy/"]],
+        "body": PRIVACY_BODY,
+        "cta": False,
+    },
+    {
+        "path": "/terms-of-service/",
+        "nav": "",
+        "title": "Terms of Service | Smoky Mountain Espresso",
+        "desc": "The website terms for smokymountainespresso.com: what the site is for, ordering through DoorDash, our content, and Tennessee governing law.",
+        "jsonld": [],
+        "crumbs": [["Home", "/"], ["Terms of service", "/terms-of-service/"]],
+        "body": TERMS_BODY,
+        "cta": False,
+    },
+    {
+        "path": "/accessibility/",
+        "nav": "",
+        "title": "Accessibility Statement | Smoky Mountain Espresso",
+        "desc": "Our WCAG 2.1 AA commitment: keyboard support, alt text, reduced-motion behavior, known third-party limitations, and how to report a barrier.",
+        "jsonld": [],
+        "crumbs": [["Home", "/"], ["Accessibility", "/accessibility/"]],
+        "body": A11Y_BODY,
+        "cta": False,
+    },
 ]
 
 NOT_FOUND_BODY = f"""<section class="page-head">
@@ -733,7 +870,8 @@ def render(spec):
     html += header(spec.get("nav", ""))
     html += crumbs_html
     html += spec["body"]
-    html += CTA_STRIP
+    if spec.get("cta", True):
+        html += CTA_STRIP
     html += FOOTER
     return html
 
@@ -806,6 +944,7 @@ Known for: the Smoky Mountain Mocha Freeze (white chocolate + caramel + espresso
 - [Coffee near Pigeon Forge]({DOMAIN}/coffee-near-pigeon-forge/): Getting here from the Parkway, evening hours
 - [Coffee near Dollywood]({DOMAIN}/coffee-near-dollywood/): Pre-park and post-park visits, cabin guests
 - [Hours, directions & contact]({DOMAIN}/contact/): Address, phone, hours, map, contact form
+- [Privacy policy]({DOMAIN}/privacy-policy/), [Terms of service]({DOMAIN}/terms-of-service/), [Accessibility statement]({DOMAIN}/accessibility/)
 """)
     print("wrote llms.txt")
 

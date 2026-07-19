@@ -18,6 +18,38 @@
     });
   }
 
+  // Scroll-reveal: fade photos/cards up as they enter the viewport.
+  // The .reveal class is only added when JS runs, so no-JS pages stay visible.
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduced && "IntersectionObserver" in window) {
+    var candidates = Array.prototype.slice.call(
+      document.querySelectorAll(".figure, .card, .review, .contact-card, .menu-feature, .froyo-badge")
+    ).filter(function (el) {
+      // don't double-animate a figure nested inside an already-revealing block
+      return el.classList.contains("menu-feature") || !el.closest(".menu-feature");
+    });
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px" }
+    );
+    candidates.forEach(function (el) {
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+    // Safety net: if the observer never fires (odd embedded browsers,
+    // aggressive battery savers), reveal everything rather than hide it.
+    setTimeout(function () {
+      candidates.forEach(function (el) { el.classList.add("in-view"); });
+    }, 2500);
+  }
+
   // Click-to-load Google map (keeps ~1MB of map scripts off initial load)
   var mapBtn = document.getElementById("map-load");
   if (mapBtn) {

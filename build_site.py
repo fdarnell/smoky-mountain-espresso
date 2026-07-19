@@ -66,7 +66,7 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="{domain}/og-image.png">
+<meta property="og:image" content="{domain}/images/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -184,7 +184,7 @@ BUSINESS_LD = {
     "url": DOMAIN + "/",
     "telephone": TEL,
     "priceRange": "$",
-    "image": DOMAIN + "/og-image.png",
+    "image": DOMAIN + "/images/og-image.jpg",
     "servesCuisine": ["Coffee", "Tea", "Frozen yogurt", "Pastries"],
     "foundingDate": "2018",
     "address": {
@@ -244,7 +244,9 @@ HOME_FAQ = [
     ("Can I get Smoky Mountain Espresso delivered?", "Yes — we're on DoorDash for delivery around Sevierville and Pigeon Forge. Most people still come in, though. The fireplace doesn't deliver."),
 ]
 
-HOME_BODY = f"""<section class="hero">
+HOME_BODY = f"""<section class="hero hero-photo-hero">
+  <div class="hero-bg" aria-hidden="true"><img src="/images/hero-patio.webp" width="1080" height="1437" fetchpriority="high" alt=""></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <p class="kicker">Sevierville, Tennessee · pouring since 2018</p>
     <h1>A Sevierville coffee shop worth slowing down for</h1>
@@ -258,7 +260,6 @@ HOME_BODY = f"""<section class="hero">
       <li>800+ five-star reviews</li>
       <li>98% recommend on Facebook</li>
     </ul>
-    <figure class="figure hero-photo"><img src="/images/storefront.webp" width="1200" height="800" fetchpriority="high" alt="Smoky Mountain Espresso at 1259 Middle Creek Rd, Sevierville"></figure>
   </div>
 </section>
 {RIDGE.format(cls="")}
@@ -314,6 +315,22 @@ HOME_BODY = f"""<section class="hero">
     <p class="section-cta"><a class="btn btn-solid" href="/menu/">{I_ARROW}<span>Browse the full menu</span></a></p>
   </div>
 </section>
+<section class="marquee-band" aria-label="Photos of drinks from Smoky Mountain Espresso">
+  <div class="marquee-track">
+    <figure class="marquee-item"><img src="/images/frappes-duo.webp" width="868" height="934" loading="lazy" alt="Two Smoky Mountain Mocha Freezes drizzled with chocolate"></figure>
+    <figure class="marquee-item"><img src="/images/strawberry-freeze.webp" width="960" height="949" loading="lazy" alt="A strawberry freeze piled with whipped cream on the patio"></figure>
+    <figure class="marquee-item"><img src="/images/pb-poster.webp" width="860" height="1082" loading="lazy" alt="Peanut Butter Banana Latte — served hot, iced, or frozen"></figure>
+    <figure class="marquee-item"><img src="/images/choc-frappe.webp" width="640" height="800" loading="lazy" alt="A chocolate mocha freeze with whipped cream and chocolate drizzle"></figure>
+    <figure class="marquee-item"><img src="/images/froyo-swirl.webp" width="800" height="800" loading="lazy" alt="A sweetFrog frozen yogurt swirl with peanut butter drizzle"></figure>
+    <figure class="marquee-item"><img src="/images/froyo-duo.webp" width="900" height="1029" loading="lazy" alt="A sweetFrog frozen yogurt cup with fresh fruit next to a caramel shake"></figure>
+    <figure class="marquee-item" aria-hidden="true"><img src="/images/frappes-duo.webp" width="868" height="934" loading="lazy" alt=""></figure>
+    <figure class="marquee-item" aria-hidden="true"><img src="/images/strawberry-freeze.webp" width="960" height="949" loading="lazy" alt=""></figure>
+    <figure class="marquee-item" aria-hidden="true"><img src="/images/pb-poster.webp" width="860" height="1082" loading="lazy" alt=""></figure>
+    <figure class="marquee-item" aria-hidden="true"><img src="/images/choc-frappe.webp" width="640" height="800" loading="lazy" alt=""></figure>
+    <figure class="marquee-item" aria-hidden="true"><img src="/images/froyo-swirl.webp" width="800" height="800" loading="lazy" alt=""></figure>
+    <figure class="marquee-item" aria-hidden="true"><img src="/images/froyo-duo.webp" width="900" height="1029" loading="lazy" alt=""></figure>
+  </div>
+</section>
 <section class="section">
   <div class="wrap split">
     <div>
@@ -321,11 +338,12 @@ HOME_BODY = f"""<section class="hero">
       <p>This isn't a grab-and-go window. The room is rustic and warm — couches, a fireplace, space for kids — and it fills up with the same mix every day: locals on laptops, church groups, and families thawing out after a day in the mountains.</p>
       <p>The Williams family runs the shop on faith, and it shows in quiet ways: scripture on the walls and a pay-it-forward board where customers leave notes of encouragement, and sometimes a paid-ahead drink for a stranger. Come as you are. Stay longer than you planned.</p>
     </div>
-    <figure class="figure"><img src="/images/fireplace-lounge.webp" width="1200" height="800" loading="lazy" alt="The fireplace seating area inside Smoky Mountain Espresso"></figure>
+    <figure class="figure"><img src="/images/pay-it-forward.webp" width="1200" height="800" loading="lazy" alt="The pay-it-forward board inside Smoky Mountain Espresso, covered in handwritten notes of encouragement"></figure>
   </div>
 </section>
 <section class="section section-tint">
   <div class="wrap froyo-strip">
+    <figure class="froyo-badge"><img src="/images/froyo-swirl.webp" width="800" height="800" loading="lazy" alt="A sweetFrog frozen yogurt swirl topped with peanut butter drizzle"></figure>
     <div>
       <h2>Frozen yogurt, same roof</h2>
       <p>There's a full self-serve <a href="/frozen-yogurt/">sweetFrog Premium Frozen Yogurt</a> bar inside the shop. Kids build their own cups while you drink your latte in peace — the rare stop that works for the whole crew.</p>
@@ -333,7 +351,7 @@ HOME_BODY = f"""<section class="hero">
     <p><a class="btn btn-ghost" href="/frozen-yogurt/">{I_ARROW}<span>More about sweetFrog</span></a></p>
   </div>
 </section>
-<section class="section">
+<section class="section reviews-band">
   <div class="wrap">
     <h2>What regulars say</h2>
     <div class="review-grid">
@@ -367,7 +385,7 @@ MENU_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h1>The menu at Smoky Mountain Espresso</h1>
     <p class="lede">Most drinks come hot, iced, or frozen — your call. Prices are posted at the counter, and seasonal specials rotate on the board. If nothing below sounds right, ask for a custom drink. The crew loves those.</p>
-    <figure class="figure"><img src="/images/mocha-freeze.webp" width="1200" height="800" fetchpriority="high" alt="A Smoky Mountain Mocha Freeze topped with whipped cream"></figure>
+    <figure class="figure figure-tall"><img src="/images/frappes-duo.webp" width="868" height="934" fetchpriority="high" alt="Two Smoky Mountain Mocha Freezes topped with whipped cream and chocolate drizzle"></figure>
   </div>
 </section>
 <section class="section menu-section">
@@ -381,6 +399,14 @@ MENU_BODY = f"""<section class="page-head">
       <li><h3>Peanut butter mocha</h3><p>Peanut butter and chocolate in drinkable form. Yes, it's as good as that sounds.</p></li>
       <li><h3>Hawaiian salted caramel coconut latte</h3><p>Salted caramel with coconut — a beach drink that somehow works in the mountains.</p></li>
     </ul>
+    <aside class="menu-feature">
+      <figure class="menu-feature-photo"><img src="/images/pb-poster.webp" width="860" height="1082" loading="lazy" alt="Peanut Butter Banana Latte poster — rich and buttery caramel, served hot, iced, or frozen"></figure>
+      <div class="menu-feature-copy">
+        <p class="kicker">On the board now</p>
+        <h2>Peanut Butter Banana Latte</h2>
+        <p>Rich, buttery caramel meets peanut butter and banana — the kind of drink you order once as a joke and then every visit after. Hot, iced, or frozen, your call.</p>
+      </div>
+    </aside>
     <h2>Espresso classics</h2>
     <ul class="menu-list">
       <li><h3>Espresso &amp; americano</h3><p>Crimson Cup espresso, pulled properly. The americano is the local remote-workers' default.</p></li>
@@ -410,7 +436,6 @@ MENU_BODY = f"""<section class="page-head">
     <ul class="menu-list">
       <li><h3>Muffins, bagels &amp; pastries</h3><p>Baked by Crust &amp; Crumb Bakery in Gatlinburg and delivered fresh. When the case is empty, it's empty — come early.</p></li>
     </ul>
-    <figure class="figure"><img src="/images/pastry-case.webp" width="1200" height="800" loading="lazy" alt="Fresh Crust &amp; Crumb pastries in the bakery case"></figure>
     <div class="callout">
       <h2>sweetFrog frozen yogurt</h2>
       <p>A full self-serve frozen yogurt bar lives inside the shop — flavors, toppings, the works. <a href="/frozen-yogurt/">Here's how it works.</a></p>
@@ -437,7 +462,7 @@ ABOUT_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h2>Two people, no coffee experience, one good idea</h2>
     <p>Michael and Karen Williams didn't come from the coffee world. What they had was a picture of the shop they wanted: real espresso, a room you'd actually want to sit in, and a business that treated people the way their faith told them to.</p>
-    <figure class="figure"><img src="/images/counter-crew.webp" width="1200" height="800" loading="lazy" alt="The Smoky Mountain Espresso crew behind the counter"></figure>
+    <figure class="figure figure-tall"><img src="/images/sign-bear.webp" width="960" height="1156" loading="lazy" alt="The carved black bear holding a coffee cup under the Smoky Mountain Espresso sign"></figure>
     <p>For the coffee itself, they partnered with <a href="https://www.crimsoncup.com/" rel="noopener">Crimson Cup Coffee &amp; Tea</a>, an award-winning roaster in Columbus, Ohio that has helped hundreds of independent shops open their doors. Crimson Cup trained the team and still supplies every bean pulled here. "Without Crimson Cup, we wouldn't have made it this far," Michael says. "They gave us everything we needed — expertise, quality, and unwavering support."</p>
     <h2>What eight years builds</h2>
     <p>Since 2018 the shop has become the kind of place reviews are written about: more than 800 five-star Google reviews, a 98% recommend rating on Facebook, and a spot at the top of Sevierville's coffee rankings on Yelp and Tripadvisor. Vacationers plan return trips around it. Locals just call it theirs.</p>
@@ -467,11 +492,12 @@ FROYO_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h2>Why a coffee shop has a froyo bar</h2>
     <p>Because families travel in packs. Half the group wants a caramel pecan latte, the other half is nine years old. The sweetFrog partnership means nobody loses: kids build their own cups — flavors, toppings, sprinkles, all of it — while the adults sit by the fireplace with something from the <a href="/menu/">espresso menu</a>.</p>
-    <figure class="figure"><img src="/images/froyo-bar.webp" width="1200" height="800" loading="lazy" alt="The self-serve sweetFrog frozen yogurt bar inside Smoky Mountain Espresso"></figure>
+    <figure class="figure figure-tall"><img src="/images/froyo-duo.webp" width="900" height="1029" loading="lazy" alt="A sweetFrog frozen yogurt cup piled with fresh fruit next to a caramel shake"></figure>
     <h2>The best rainy-day move in Sevier County</h2>
     <p>Every Smokies vacation hits one rained-out afternoon. When the mountain trails are mud and the cabin walls are closing in, a warm room with a fireplace, hot chocolate, espresso, and a build-your-own frozen yogurt bar solves the whole day. We've watched it happen from behind the counter about a thousand times.</p>
     <h2>After the park, before the cabin</h2>
     <p>We're about ten minutes from <a href="/coffee-near-dollywood/">Dollywood</a>, right on the way back toward Sevierville. A froyo stop on the drive home beats a meltdown in the parking lot — and we're open until 9:00 most nights, 9:30 on Friday and Saturday.</p>
+    <figure class="figure figure-tall"><img src="/images/froyo-swirl.webp" width="800" height="800" loading="lazy" alt="A sweetFrog frozen yogurt swirl with peanut butter drizzle and crushed peanuts"></figure>
   </div>
 </section>
 """ + faq_html("Frozen yogurt questions", FROYO_FAQ)
@@ -495,7 +521,7 @@ PF_BODY = f"""<section class="page-head">
     <h2>The locals' route to better coffee</h2>
     <p>Anyone who's driven the Pigeon Forge Parkway in July knows the math: two miles, forty-five minutes. Middle Creek Road is how locals get around it — and partway up that road, at number 1259, is the coffee shop those same locals actually use. From the middle of Pigeon Forge you're looking at roughly a ten-minute drive on a normal day.</p>
     <p>What's waiting is the opposite of a tourist-strip coffee stand: couches, a fireplace, scripture on the walls, and a <a href="/menu/">menu</a> that runs from a proper cappuccino to the Smoky Mountain Mocha Freeze — white chocolate, caramel, espresso, and ice, blended.</p>
-    <figure class="figure"><img src="/images/coffee-flight.webp" width="1200" height="800" loading="lazy" alt="A coffee flight of four small pours at Smoky Mountain Espresso"></figure>
+    <figure class="figure figure-tall"><img src="/images/strawberry-freeze.webp" width="960" height="949" loading="lazy" alt="A strawberry freeze piled with whipped cream on the patio at Smoky Mountain Espresso"></figure>
     <h2>Evenings are the secret</h2>
     <p>Most independent coffee around here closes mid-afternoon. This one pours until 9:00 PM on weeknights and 9:30 on Friday and Saturday — after-dinner coffee, dessert froyo for the kids at the <a href="/frozen-yogurt/">sweetFrog bar</a>, and somewhere warm to land after a show without rejoining the Parkway parade.</p>
     <h2>Worth leaving the strip for?</h2>
@@ -522,7 +548,7 @@ DW_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h2>Park days start early</h2>
     <p>If you're doing Dollywood right, you're up before the park is. We open at 7:30 AM Monday through Saturday, which leaves time for a real espresso and a Crust &amp; Crumb muffin from the bakery case before you're standing at the gates. A nitro cold brew rides shotgun just fine.</p>
-    <figure class="figure"><img src="/images/nitro-pour.webp" width="1200" height="800" loading="lazy" alt="Nitro cold brew being poured at Smoky Mountain Espresso"></figure>
+    <figure class="figure figure-tall"><img src="/images/choc-frappe.webp" width="640" height="800" loading="lazy" alt="A chocolate mocha freeze with whipped cream and chocolate drizzle"></figure>
     <h2>The decompression stop</h2>
     <p>Eight hours of coasters and August heat earns you a soft landing. On the drive back toward Sevierville, the shop shows up right when everyone's fading: frozen drinks and the <a href="/frozen-yogurt/">self-serve sweetFrog bar</a> for the kids, a couch and a quiet latte for whoever did the sunscreen logistics. Most nights we're pouring until 9:00, and until 9:30 on Friday and Saturday.</p>
     <h2>Staying in a cabin nearby?</h2>
@@ -545,7 +571,7 @@ CONTACT_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h1>Visit us on Middle Creek Road</h1>
     <p class="lede">Seven days a week in Sevierville — between downtown and Dollywood, minutes off the Parkway, with parking out front.</p>
-    <figure class="figure"><img src="/images/storefront.webp" width="1200" height="800" fetchpriority="high" alt="Looking for us: the Smoky Mountain Espresso building at 1259 Middle Creek Rd"></figure>
+    <figure class="figure"><img src="/images/storefront.webp" width="1200" height="800" fetchpriority="high" alt="The stone fireplace patio at Smoky Mountain Espresso, 1259 Middle Creek Rd, at sunset"></figure>
   </div>
 </section>
 <section class="section">

@@ -1,46 +1,42 @@
-# Photos — what goes where
+# Photos — installed
 
-Every page has photo slots already built in. Right now they hold branded
-placeholder images; the site works, but it will really come alive once the
-real photos are in. This build session's network policy blocked downloading
-images directly from Facebook and Google, so installing them is a
-two-minute manual job:
+Real shop photos are now live on every page. The originals live in
+`raw-photos/` and the processed versions (cropped, color-graded, sharpened,
+WebP) in `images/`. To re-process after swapping a raw photo, run:
 
-## How to install the real photos
+    python3 tools/enhance_photos.py
 
-1. Open the shop's [Facebook photos](https://www.facebook.com/smespresso/photos)
-   (or their Google Business Profile photo section) and download the shots
-   listed below. Photos the owners posted themselves are safest to use.
-2. Save each one into a `raw-photos/` folder at the root of this repo, named
-   for its slot (e.g. `raw-photos/storefront.jpg`).
-3. Run `python3 tools/prepare_photos.py` — it crops, resizes, and converts
-   each photo and replaces the placeholder automatically.
-4. Commit and push.
+then `python3 build_site.py` and commit. Per-photo crop/grade settings live
+at the top of `tools/enhance_photos.py`.
 
-## The shot list
+## What's where
 
-| Slot filename | What to look for | Used on |
+| Image | Shot | Used on |
 |---|---|---|
-| `storefront.jpg` | Exterior of the shop / signage on Middle Creek Rd | Home hero, Contact |
-| `fireplace-lounge.jpg` | The couches + fireplace seating area | Home |
-| `mocha-freeze.jpg` | A Smoky Mountain Mocha Freeze (or any pretty signature drink) | Menu |
-| `pastry-case.jpg` | The Crust & Crumb bakery case | Menu |
-| `counter-crew.jpg` | Michael, Karen, and/or the baristas behind the counter | About |
-| `froyo-bar.jpg` | The sweetFrog self-serve yogurt machines/toppings bar | Frozen yogurt |
-| `coffee-flight.jpg` | A coffee flight board with the small pours | Coffee near Pigeon Forge |
-| `nitro-pour.jpg` | Nitro cold brew being poured / a latte-art pour | Coffee near Dollywood |
+| `hero-patio.webp` | Sunset patio + stone fireplace exterior | Home hero (full-bleed background, slow Ken Burns zoom) |
+| `storefront.webp` | Same shot, landscape crop | Contact page head |
+| `og-image.jpg` | Same shot, 1200x630 | Social link previews (og:image) |
+| `pay-it-forward.webp` | The pay-it-forward board (Google overlay cropped out) | Home "Built for staying a while" |
+| `sign-bear.webp` | Carved bear under the wall sign | About page |
+| `frappes-duo.webp` | Two mocha freezes | Menu head + home marquee |
+| `pb-poster.webp` | Peanut Butter Banana Latte poster | Menu "On the board now" feature + marquee |
+| `choc-frappe.webp` | Chocolate mocha freeze | Dollywood page + marquee |
+| `strawberry-freeze.webp` | Strawberry freeze on the patio | Pigeon Forge page + marquee |
+| `froyo-duo.webp` | sweetFrog cup + shake, pink wall | Frozen yogurt page + marquee |
+| `froyo-swirl.webp` | sweetFrog swirl with PB drizzle | Home froyo badge (round, bobbing) + froyo page + marquee |
+| `beans-band.webp` | Roasted beans macro | Dark parallax band behind home reviews |
+| `espresso-bar.jpg` | Espresso bar interior | Background of the 3D cup band |
 
-Landscape orientation works best (everything is cropped to 3:2, 1200x800).
+## Two photos deliberately not used
 
-## Rights note (important)
+Two shots in the source folder were Dreamstime stock previews with visible
+watermarks (the milk-splash cup and the coffee-bean heart). Publishing
+watermarked stock on a commercial site is a copyright problem — if you want
+those exact looks, license them (or shoot similar in-store) and drop them
+into `raw-photos/`.
+
+## Rights note (still important)
 
 - Photos **the shop posted on its own Facebook/Instagram/GBP** are theirs — use freely.
-- Photos **guests attached to Google/Yelp/Tripadvisor reviews** belong to the
-  guest. Get a quick OK (a comment or DM works: "Love this shot — mind if we
-  use it on our website?") before publishing one, and credit them if they'd like.
-
-## Alt text
-
-Each slot's `alt` text already describes the intended real photo, so no HTML
-edits are needed when you swap the files. If you use a noticeably different
-shot, update the `alt` in `build_site.py` and re-run `python3 build_site.py`.
+- Photos **guests attached to reviews** belong to the guest — get a quick OK
+  before publishing, and credit them if they'd like.

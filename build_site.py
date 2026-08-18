@@ -273,12 +273,12 @@ HOME_BODY = f"""<section class="hero hero-photo-hero">
     <p>The espresso itself comes from <a href="/about/">Crimson Cup Coffee &amp; Tea</a>, an award-winning Ohio roaster, and it's pulled all day long — hot, iced, frozen, or on nitro tap. If you don't see what you want on the board, ask. The crew builds custom drinks constantly.</p>
   </div>
 </section>
-<section class="cup-band" id="cup-band" aria-label="Interactive 3D espresso cup">
+<section class="cup-band" id="cup-band" aria-label="Interactive 3D Mocha Freeze">
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.2.0/dist/model-viewer.min.js"></script>
   <model-viewer
-    src="/models/smoky-espresso-cup-web.glb"
-    ios-src="/models/smoky-espresso-cup-web.usdz"
-    alt="A Smoky Mountain Espresso cup in 3D — it spins as you scroll; drag to rotate, or tap the AR button to see it on your own table"
+    src="/models/smoky-mocha-freeze-web.glb"
+    ios-src="/models/smoky-mocha-freeze-web.usdz"
+    alt="A Smoky Mountain Mocha Freeze topped with whipped cream and chocolate drizzle in 3D — it spins as you scroll; drag to rotate, or tap the AR button to see it on your own table"
     camera-orbit="0deg 75deg 105%"
     camera-controls
     disable-zoom
@@ -287,7 +287,7 @@ HOME_BODY = f"""<section class="hero hero-photo-hero">
     ar-modes="webxr scene-viewer quick-look"
     shadow-intensity="1"
     loading="lazy"></model-viewer>
-  <p class="cup-band-hint">Scroll to spin the cup — or drag it, and tap the cube to set it on your own table in AR.</p>
+  <p class="cup-band-hint">Scroll to spin the Mocha Freeze — or drag it, and tap the cube to set it on your own table in AR.</p>
 </section>
 <script>
 (function () {{
@@ -655,7 +655,7 @@ PRIVACY_BODY = f"""<section class="page-head">
     <p>If you use the contact form on our <a href="/contact/">Visit us</a> page, we receive the name, phone number, and message you type. If you call us or message us on Facebook, we see what you send there. That's it — the site has no accounts, no ordering, and no newsletter signup.</p>
     <p>Contact form submissions are delivered to us by a form-processing service acting on our behalf, which stores them so we can reply.</p>
     <h2>Information collected automatically</h2>
-    <p>Like nearly every website, our hosting provider (Vercel) keeps standard server logs — IP address, pages requested, browser type, and timestamps — used for security and keeping the site running. The interactive 3D coffee cup on our home page loads from a content-delivery network (jsDelivr), which receives the same standard request data when your browser fetches it. The map on the Visit us page loads from Google <em>only if you tap the "Load interactive map" button</em>; until then, Google gets nothing from your visit.</p>
+    <p>Like nearly every website, our hosting provider (Vercel) keeps standard server logs — IP address, pages requested, browser type, and timestamps — used for security and keeping the site running. The interactive 3D drink on our home page loads from a content-delivery network (jsDelivr), which receives the same standard request data when your browser fetches it. The map on the Visit us page loads from Google <em>only if you tap the "Load interactive map" button</em>; until then, Google gets nothing from your visit.</p>
     <p>We do not run analytics trackers, advertising pixels, or retargeting on this site.</p>
     <h2>Text messaging (SMS)</h2>
     <p>If you give us your phone number, we may call or text you back about your question. Message frequency varies; message and data rates may apply. Reply STOP to opt out, HELP for help. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Opt-in data and consent are not shared with any third party.</p>
@@ -728,7 +728,7 @@ A11Y_BODY = f"""<section class="page-head">
       <li>Self-hosted fonts, no autoplaying audio or video.</li>
     </ul>
     <h2>Known limitations</h2>
-    <p>A few pieces come from third parties and aren't fully under our control: the Google map on the Visit us page (it loads only when you choose to open it, and written directions are always available by phone), the interactive 3D coffee cup on the home page (it's decorative — every piece of information it conveys is also in regular text), and the contact form's processing service. If any of these blocks you, the phone works for everything: {PHONE}.</p>
+    <p>A few pieces come from third parties and aren't fully under our control: the Google map on the Visit us page (it loads only when you choose to open it, and written directions are always available by phone), the interactive 3D drink on the home page (it's decorative — every piece of information it conveys is also in regular text), and the contact form's processing service. If any of these blocks you, the phone works for everything: {PHONE}.</p>
     <h2>Found a barrier?</h2>
     <p>If something on this site is hard to use with your assistive technology, please tell us — call {PHONE} or ask for the owner at the shop. We'll fix what we can promptly, and in the meantime we'll get you whatever information the page was supposed to provide.</p>
   </div>

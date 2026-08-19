@@ -259,7 +259,7 @@ HOME_BODY = f"""<section class="hero hero-photo-hero">
       <a class="btn btn-ghost" href="/menu/">{I_ARROW}<span>See the menu</span></a>
     </div>
     <ul class="proof-chips">
-      <li>{I_STAR}4.6 stars on Google</li>
+      <li>{I_STAR}4.9 stars on Facebook</li>
       <li>800+ five-star reviews</li>
       <li>98% recommend on Facebook</li>
     </ul>

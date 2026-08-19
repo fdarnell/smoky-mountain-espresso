@@ -82,9 +82,9 @@ SPECS = {
     # self-serve toppings bar — frozen yogurt page
     "froyo-toppings": dict(src="froyo-toppings.png", crop=None, grade=(1.00, 1.00, 1.00),
                            sharpen=45, out=(1200, 900), q=78, name="froyo-toppings.webp"),
-    # storefront with both signs — contact page head
-    "storefront-facade": dict(src="storefront-facade.png", crop=None, grade=(1.00, 1.00, 1.00),
-                              sharpen=45, out=(1200, 900), q=78, name="storefront-facade.webp"),
+    # building exterior with both signs — homepage hero background (landscape)
+    "hero-exterior": dict(src="storefront-facade.png", crop=None, grade=(1.00, 1.00, 1.00),
+                          sharpen=45, out=(1448, 1086), q=72, name="hero-exterior.webp"),
     # drive-thru lane beside the building — contact page
     "drive-thru": dict(src="drive-thru.png", crop=None, grade=(1.00, 1.00, 1.00),
                        sharpen=45, out=(1200, 900), q=75, name="drive-thru.webp"),

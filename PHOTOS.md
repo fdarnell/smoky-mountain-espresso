@@ -26,7 +26,7 @@ at the top of `tools/enhance_photos.py`.
 | `froyo-swirl.webp` | sweetFrog swirl with PB drizzle | Home froyo badge (round, bobbing) + froyo page + marquee |
 | `beans-band.webp` | Roasted beans macro | Dark parallax band behind home reviews |
 | `espresso-bar.jpg` | Espresso bar interior | Background of the 3D cup band |
-| `storefront-facade.webp` | Front facade, both signs (AI-enhanced) | Contact page head (replaced `storefront.webp`, which is now unused but kept) |
+| `hero-exterior.webp` | Building exterior, both signs (AI-enhanced) | Home hero (full-bleed background; replaced the sunset `hero-patio.webp`, kept in images/) |
 | `drive-thru.webp` | Drive-thru lane + building (AI-enhanced) | Contact page, map section |
 | `patio-day.webp` | Sunny patio, shade sail (AI-enhanced) | Dollywood page |
 | `patio-fireside.webp` | Patio tables by the fireplace (AI-enhanced) | About page |

@@ -248,7 +248,7 @@ HOME_FAQ = [
 ]
 
 HOME_BODY = f"""<section class="hero hero-photo-hero">
-  <div class="hero-bg" aria-hidden="true"><img src="/images/hero-patio.webp" width="1080" height="1437" fetchpriority="high" alt=""></div>
+  <div class="hero-bg" aria-hidden="true"><img src="/images/hero-exterior.webp" width="1448" height="1086" fetchpriority="high" alt=""></div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <p class="kicker">Sevierville, Tennessee · pouring since 2018</p>
@@ -578,7 +578,7 @@ CONTACT_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h1>Visit us on Middle Creek Road</h1>
     <p class="lede">Seven days a week in Sevierville — between downtown and Dollywood, minutes off the Parkway, with parking out front.</p>
-    <figure class="figure"><img src="/images/storefront-facade.webp" width="1200" height="900" fetchpriority="high" alt="The Smoky Mountain Espresso and sweetFrog storefront at 1259 Middle Creek Rd, Sevierville"></figure>
+    <figure class="figure"><img src="/images/storefront.webp" width="1200" height="800" fetchpriority="high" alt="The stone fireplace patio at Smoky Mountain Espresso, 1259 Middle Creek Rd, at sunset"></figure>
   </div>
 </section>
 <section class="section">

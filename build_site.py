@@ -261,7 +261,7 @@ HOME_BODY = f"""<section class="hero hero-photo-hero">
     <ul class="proof-chips">
       <li>{I_STAR}4.9 stars on Facebook</li>
       <li>800+ five-star reviews</li>
-      <li>98% recommend on Facebook</li>
+      <li>4.6 stars on Google</li>
     </ul>
   </div>
 </section>

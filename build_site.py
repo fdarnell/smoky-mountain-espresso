@@ -141,8 +141,8 @@ FOOTER = f"""</main>
     <div>
       <p class="footer-head">Hours</p>
       <ul class="footer-hours">
-        <li><span>Mon – Thu</span><span>7:30 AM – 9:00 PM</span></li>
-        <li><span>Fri – Sat</span><span>7:30 AM – 9:30 PM</span></li>
+        <li><span>Mon – Thu</span><span>7:00 AM – 9:00 PM</span></li>
+        <li><span>Fri – Sat</span><span>7:00 AM – 9:30 PM</span></li>
         <li><span>Sunday</span><span>1:00 PM – 9:00 PM</span></li>
       </ul>
     </div>
@@ -199,8 +199,8 @@ BUSINESS_LD = {
         "addressCountry": "US",
     },
     "openingHoursSpecification": [
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "07:30", "closes": "21:00"},
-        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "07:30", "closes": "21:30"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "07:00", "closes": "21:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "07:00", "closes": "21:30"},
         {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:00", "closes": "21:00"},
     ],
     "areaServed": ["Sevierville TN", "Pigeon Forge TN", "Gatlinburg TN"],
@@ -241,7 +241,7 @@ def crumb_ld(items):
 # ================================================================== PAGES
 # ------ home
 HOME_FAQ = [
-    ("What time does Smoky Mountain Espresso open?", "We open at 7:30 AM Monday through Saturday and at 1:00 PM on Sundays. We close at 9:00 PM most nights and 9:30 PM on Friday and Saturday. Hours can shift with the season, so call (865) 366-1685 if you're making a special trip."),
+    ("What time does Smoky Mountain Espresso open?", "We open at 7:00 AM Monday through Saturday and at 1:00 PM on Sundays. We close at 9:00 PM most nights and 9:30 PM on Friday and Saturday. Hours can shift with the season, so call (865) 366-1685 if you're making a special trip."),
     ("Does Smoky Mountain Espresso serve food?", "Yes — the bakery case is stocked with muffins, bagels, and pastries baked by Crust &amp; Crumb Bakery in Gatlinburg, and there's a self-serve sweetFrog frozen yogurt bar inside the shop."),
     ("Is Smoky Mountain Espresso kid-friendly?", "Very. Kids can build their own frozen yogurt at the sweetFrog bar while you drink your coffee like a civilized person, and there's plenty of comfortable seating for families."),
     ("Can I get Smoky Mountain Espresso delivered?", "Yes — we're on DoorDash for delivery around Sevierville and Pigeon Forge. Most people still come in, though. The fireplace doesn't deliver."),
@@ -370,7 +370,7 @@ HOME_BODY = f"""<section class="hero hero-photo-hero">
     <h2>In town for the mountains?</h2>
     <div class="card-grid card-grid-2">
       <article class="card"><h3><a href="/coffee-near-pigeon-forge/">Staying in Pigeon Forge?</a></h3><p>We're a short hop up Middle Creek Road — real espresso without the Parkway traffic.</p></article>
-      <article class="card"><h3><a href="/coffee-near-dollywood/">Headed to Dollywood?</a></h3><p>We open at 7:30, well before the park gates. Fuel up on the way in, wind down on the way out.</p></article>
+      <article class="card"><h3><a href="/coffee-near-dollywood/">Headed to Dollywood?</a></h3><p>We open at 7:00, well before the park gates. Fuel up on the way in, wind down on the way out.</p></article>
     </div>
   </div>
 </section>
@@ -483,7 +483,7 @@ FROYO_FAQ = [
     ("Is sweetFrog inside Smoky Mountain Espresso?", "Yes — the sweetFrog Premium Frozen Yogurt bar is inside the coffee shop at 1259 Middle Creek Rd in Sevierville. One stop, one register, coffee on one side and froyo on the other."),
     ("How does the self-serve frozen yogurt work?", "Grab a cup, pull the flavors you want from the machines, pile on toppings, and bring it to the counter. Mix as many flavors as you like — that's the point."),
     ("Can we come just for the frozen yogurt?", "Absolutely. Plenty of families do, especially on hot afternoons and after Dollywood. The coffee is here if the grown-ups get tempted, which they usually do."),
-    ("What are the frozen yogurt hours?", "Same as the shop: 7:30 AM to 9:00 PM Monday through Thursday, until 9:30 Friday and Saturday, and 1:00 to 9:00 PM on Sundays."),
+    ("What are the frozen yogurt hours?", "Same as the shop: 7:00 AM to 9:00 PM Monday through Thursday, until 9:30 Friday and Saturday, and 1:00 to 9:00 PM on Sundays."),
 ]
 
 FROYO_BODY = f"""<section class="page-head">
@@ -538,7 +538,7 @@ PF_BODY = f"""<section class="page-head">
 
 # ------ dollywood
 DW_FAQ = [
-    ("Where can I get coffee before Dollywood opens?", "Smoky Mountain Espresso at 1259 Middle Creek Rd opens at 7:30 AM Monday through Saturday — well before the park gates — and it's about a ten-minute drive from Dollywood's entrance."),
+    ("Where can I get coffee before Dollywood opens?", "Smoky Mountain Espresso at 1259 Middle Creek Rd opens at 7:00 AM Monday through Saturday — well before the park gates — and it's about a ten-minute drive from Dollywood's entrance."),
     ("How far is Smoky Mountain Espresso from Dollywood?", "About ten minutes by car. The shop sits on Middle Creek Road on the Sevierville side, and Middle Creek connects straight through toward the Dollywood area."),
     ("What should I order on a park day?", "Going in: a nitro cold brew or an americano travels well. Coming out: the Smoky Mountain Mocha Freeze is basically dessert and air conditioning in a cup, and the kids can hit the sweetFrog frozen yogurt bar."),
     ("Is it open after the park closes?", "Usually, yes — the shop pours until 9:00 PM most nights and 9:30 on Friday and Saturday, while Dollywood's closing time varies by season."),
@@ -547,13 +547,13 @@ DW_FAQ = [
 DW_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h1>Coffee near Dollywood: open before the gates, pouring after the fireworks</h1>
-    <p class="lede">Smoky Mountain Espresso is about ten minutes from Dollywood on Middle Creek Road — open at 7:30 AM for the rope-drop crowd and until 9:00 or later for the survivors.</p>
+    <p class="lede">Smoky Mountain Espresso is about ten minutes from Dollywood on Middle Creek Road — open at 7:00 AM for the rope-drop crowd and until 9:00 or later for the survivors.</p>
   </div>
 </section>
 <section class="section">
   <div class="wrap wrap-narrow">
     <h2>Park days start early</h2>
-    <p>If you're doing Dollywood right, you're up before the park is. We open at 7:30 AM Monday through Saturday, which leaves time for a real espresso and a Crust &amp; Crumb muffin from the bakery case before you're standing at the gates. A nitro cold brew rides shotgun just fine.</p>
+    <p>If you're doing Dollywood right, you're up before the park is. We open at 7:00 AM Monday through Saturday, which leaves time for a real espresso and a Crust &amp; Crumb muffin from the bakery case before you're standing at the gates. A nitro cold brew rides shotgun just fine.</p>
     <figure class="figure figure-tall"><img src="/images/choc-frappe.webp" width="640" height="800" loading="lazy" alt="A chocolate mocha freeze with whipped cream and chocolate drizzle"></figure>
     <h2>The decompression stop</h2>
     <p>Eight hours of coasters and August heat earns you a soft landing. On the drive back toward Sevierville, the shop shows up right when everyone's fading: frozen drinks and the <a href="/frozen-yogurt/">self-serve sweetFrog bar</a> for the kids, a couch and a quiet latte for whoever did the sunscreen logistics. Most nights we're pouring until 9:00, and until 9:30 on Friday and Saturday.</p>
@@ -596,8 +596,8 @@ CONTACT_BODY = f"""<section class="page-head">
     <div class="contact-card">
       <h2>{I_CLOCK}Hours</h2>
       <ul class="hours-table">
-        <li><span>Monday – Thursday</span><span>7:30 AM – 9:00 PM</span></li>
-        <li><span>Friday – Saturday</span><span>7:30 AM – 9:30 PM</span></li>
+        <li><span>Monday – Thursday</span><span>7:00 AM – 9:00 PM</span></li>
+        <li><span>Friday – Saturday</span><span>7:00 AM – 9:30 PM</span></li>
         <li><span>Sunday</span><span>1:00 PM – 9:00 PM</span></li>
       </ul>
       <p class="hours-note">Hours can shift with the season — call ahead if you're making a special trip.</p>
@@ -794,7 +794,7 @@ PAGES = [
         "path": "/coffee-near-dollywood/",
         "nav": "",
         "title": "Coffee Near Dollywood | Smoky Mountain Espresso",
-        "desc": "Ten minutes from Dollywood on Middle Creek Rd: espresso from 7:30 AM before the gates open, frozen drinks and sweetFrog froyo after the park closes.",
+        "desc": "Ten minutes from Dollywood on Middle Creek Rd: espresso from 7:00 AM before the gates open, frozen drinks and sweetFrog froyo after the park closes.",
         "jsonld": [
             {**BUSINESS_LD, "@id": DOMAIN + "/coffee-near-dollywood/#business", "areaServed": {"@type": "Place", "name": "Dollywood area, Pigeon Forge, Tennessee"}},
             faq_ld(DW_FAQ),
@@ -936,7 +936,7 @@ Sitemap: {DOMAIN}/sitemap.xml
 
     (root / "llms.txt").write_text(f"""# Smoky Mountain Espresso
 
-> Independent, family-owned coffee shop at {ADDR}, open since 2018. Award-winning espresso drinks made with Crimson Cup coffee, a self-serve sweetFrog frozen yogurt bar inside the shop, and fresh pastries from Crust & Crumb Bakery (Gatlinburg). About ten minutes from Dollywood and the Pigeon Forge Parkway. Phone: {PHONE}. Open Mon–Thu 7:30 AM–9:00 PM, Fri–Sat 7:30 AM–9:30 PM, Sun 1:00–9:00 PM.
+> Independent, family-owned coffee shop at {ADDR}, open since 2018. Award-winning espresso drinks made with Crimson Cup coffee, a self-serve sweetFrog frozen yogurt bar inside the shop, and fresh pastries from Crust & Crumb Bakery (Gatlinburg). About ten minutes from Dollywood and the Pigeon Forge Parkway. Phone: {PHONE}. Open Mon–Thu 7:00 AM–9:00 PM, Fri–Sat 7:00 AM–9:30 PM, Sun 1:00–9:00 PM.
 
 Known for: the Smoky Mountain Mocha Freeze (white chocolate + caramel + espresso, blended), red velvet lattes, nitro cold brew, coffee flights, and a cozy fireplace room. 4.6-star Google rating with 800+ five-star reviews; 98% recommend on Facebook.
 

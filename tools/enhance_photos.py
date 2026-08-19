@@ -88,10 +88,10 @@ SPECS = {
     # drive-thru lane beside the building — contact page
     "drive-thru": dict(src="drive-thru.png", crop=None, grade=(1.00, 1.00, 1.00),
                        sharpen=45, out=(1200, 900), q=75, name="drive-thru.webp"),
-    # drive-thru lane + yellow gable — 3D cup band background. Crop drops the
-    # menu kiosk on the left: its regenerated text is gibberish up close and
-    # must not be readable on the site (see PHOTOS.md provenance note).
-    "cup-band-bg": dict(src="drive-thru-lane.png", crop=(470, 0, 1448, 1086),
+    # two freezes on the counter — 3D cup band background. Owner's explicit
+    # call to run the full frame despite the garbled AI menu boards in the
+    # background (see PHOTOS.md provenance note); do not re-crop without asking.
+    "cup-band-bg": dict(src="freezes-counter.png", crop=None,
                         grade=(1.00, 1.00, 1.00), sharpen=45, out=None, q=72,
                         name="cup-band-bg.webp"),
 }

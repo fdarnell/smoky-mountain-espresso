@@ -65,6 +65,29 @@ SPECS = {
     "og": dict(src="hero-patio.png", crop=(0, 417, 1078, 983),
                grade=(1.00, 1.05, 1.10), sharpen=70, out=(1200, 630), q=85,
                name="og-image.jpg"),
+    # --- 2026-08 batch: AI-enhanced versions of the shop's own photos
+    # (already color-graded upstream, so grade stays neutral)
+    # daytime patio, shade sail + green picnic tables — Dollywood page
+    "patio-day": dict(src="patio-day.png", crop=None, grade=(1.00, 1.00, 1.00),
+                      sharpen=45, out=(1200, 900), q=70, name="patio-day.webp"),
+    # patio tables beside the stone fireplace — about page
+    "patio-fireside": dict(src="patio-fireside.png", crop=None, grade=(1.00, 1.00, 1.00),
+                           sharpen=45, out=(1200, 900), q=70, name="patio-fireside.webp"),
+    # string lights over the patio — Pigeon Forge page
+    "patio-lights": dict(src="patio-lights.png", crop=None, grade=(1.00, 1.00, 1.00),
+                         sharpen=45, out=(1200, 900), q=70, name="patio-lights.webp"),
+    # sweetFrog dining room — frozen yogurt page
+    "froyo-room": dict(src="froyo-room.png", crop=None, grade=(1.00, 1.00, 1.00),
+                       sharpen=45, out=(1200, 900), q=78, name="froyo-room.webp"),
+    # self-serve toppings bar — frozen yogurt page
+    "froyo-toppings": dict(src="froyo-toppings.png", crop=None, grade=(1.00, 1.00, 1.00),
+                           sharpen=45, out=(1200, 900), q=78, name="froyo-toppings.webp"),
+    # storefront with both signs — contact page head
+    "storefront-facade": dict(src="storefront-facade.png", crop=None, grade=(1.00, 1.00, 1.00),
+                              sharpen=45, out=(1200, 900), q=78, name="storefront-facade.webp"),
+    # drive-thru lane beside the building — contact page
+    "drive-thru": dict(src="drive-thru.png", crop=None, grade=(1.00, 1.00, 1.00),
+                       sharpen=45, out=(1200, 900), q=75, name="drive-thru.webp"),
 }
 
 

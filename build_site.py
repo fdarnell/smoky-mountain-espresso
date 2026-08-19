@@ -469,6 +469,7 @@ ABOUT_BODY = f"""<section class="page-head">
     <p>For the coffee itself, they partnered with <a href="https://www.crimsoncup.com/" rel="noopener">Crimson Cup Coffee &amp; Tea</a>, an award-winning roaster in Columbus, Ohio that has helped hundreds of independent shops open their doors. Crimson Cup trained the team and still supplies every bean pulled here. "Without Crimson Cup, we wouldn't have made it this far," Michael says. "They gave us everything we needed — expertise, quality, and unwavering support."</p>
     <h2>What eight years builds</h2>
     <p>Since 2018 the shop has become the kind of place reviews are written about: more than 800 five-star Google reviews, a 98% recommend rating on Facebook, and a spot at the top of Sevierville's coffee rankings on Yelp and Tripadvisor. Vacationers plan return trips around it. Locals just call it theirs.</p>
+    <figure class="figure"><img src="/images/patio-fireside.webp" width="1200" height="900" loading="lazy" alt="Patio tables under the shade sail beside the stone fireplace at Smoky Mountain Espresso"></figure>
     <h2>The faith part, plainly</h2>
     <p>This is a Christian-owned shop and it doesn't hide that — there's scripture on the walls and a pay-it-forward board where strangers cover each other's drinks and leave notes of encouragement. Nobody's checking anyone at the door. Everyone's welcome, every day, exactly as they are.</p>
     <h2>Where the money goes when you buy a latte here</h2>
@@ -495,9 +496,10 @@ FROYO_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h2>Why a coffee shop has a froyo bar</h2>
     <p>Because families travel in packs. Half the group wants a caramel pecan latte, the other half is nine years old. The sweetFrog partnership means nobody loses: kids build their own cups — flavors, toppings, sprinkles, all of it — while the adults sit by the fireplace with something from the <a href="/menu/">espresso menu</a>.</p>
-    <figure class="figure figure-tall"><img src="/images/froyo-duo.webp" width="900" height="1029" loading="lazy" alt="A sweetFrog frozen yogurt cup piled with fresh fruit next to a caramel shake"></figure>
+    <figure class="figure"><img src="/images/froyo-toppings.webp" width="1200" height="900" loading="lazy" alt="The self-serve toppings bar at the sweetFrog counter — fresh fruit, candy, and sauces on ice"></figure>
     <h2>The best rainy-day move in Sevier County</h2>
     <p>Every Smokies vacation hits one rained-out afternoon. When the mountain trails are mud and the cabin walls are closing in, a warm room with a fireplace, hot chocolate, espresso, and a build-your-own frozen yogurt bar solves the whole day. We've watched it happen from behind the counter about a thousand times.</p>
+    <figure class="figure"><img src="/images/froyo-room.webp" width="1200" height="900" loading="lazy" alt="The bright pink-and-green sweetFrog dining room inside Smoky Mountain Espresso"></figure>
     <h2>After the park, before the cabin</h2>
     <p>We're about ten minutes from <a href="/coffee-near-dollywood/">Dollywood</a>, right on the way back toward Sevierville. A froyo stop on the drive home beats a meltdown in the parking lot — and we're open until 9:00 most nights, 9:30 on Friday and Saturday.</p>
     <figure class="figure figure-tall"><img src="/images/froyo-swirl.webp" width="800" height="800" loading="lazy" alt="A sweetFrog frozen yogurt swirl with peanut butter drizzle and crushed peanuts"></figure>
@@ -527,6 +529,7 @@ PF_BODY = f"""<section class="page-head">
     <figure class="figure figure-tall"><img src="/images/strawberry-freeze.webp" width="960" height="949" loading="lazy" alt="A strawberry freeze piled with whipped cream on the patio at Smoky Mountain Espresso"></figure>
     <h2>Evenings are the secret</h2>
     <p>Most independent coffee around here closes mid-afternoon. This one pours until 9:00 PM on weeknights and 9:30 on Friday and Saturday — after-dinner coffee, dessert froyo for the kids at the <a href="/frozen-yogurt/">sweetFrog bar</a>, and somewhere warm to land after a show without rejoining the Parkway parade.</p>
+    <figure class="figure"><img src="/images/patio-lights.webp" width="1200" height="900" loading="lazy" alt="String lights over the patio seating at Smoky Mountain Espresso"></figure>
     <h2>Worth leaving the strip for?</h2>
     <p>The reviews answer that one: 4.6 stars on Google across years of vacationers and regulars, and travelers on Tripadvisor calling it a must-stop on every trip. One reviewer put it simply — "the most friendly staff and best coffee in town."</p>
   </div>
@@ -554,6 +557,7 @@ DW_BODY = f"""<section class="page-head">
     <figure class="figure figure-tall"><img src="/images/choc-frappe.webp" width="640" height="800" loading="lazy" alt="A chocolate mocha freeze with whipped cream and chocolate drizzle"></figure>
     <h2>The decompression stop</h2>
     <p>Eight hours of coasters and August heat earns you a soft landing. On the drive back toward Sevierville, the shop shows up right when everyone's fading: frozen drinks and the <a href="/frozen-yogurt/">self-serve sweetFrog bar</a> for the kids, a couch and a quiet latte for whoever did the sunscreen logistics. Most nights we're pouring until 9:00, and until 9:30 on Friday and Saturday.</p>
+    <figure class="figure"><img src="/images/patio-day.webp" width="1200" height="900" loading="lazy" alt="The sunny patio at Smoky Mountain Espresso with rocking chairs and picnic tables under a shade sail"></figure>
     <h2>Staying in a cabin nearby?</h2>
     <p>Middle Creek Road and the hills around it are full of rental cabins, and we're the closest real coffee shop for a lot of them. Skip the cabin-coffee-maker disappointment — the <a href="/menu/">full menu</a> is ten minutes away, and DoorDash covers the area if nobody wants to put on shoes.</p>
     <h2>Yes, it beats standing in a park coffee line</h2>
@@ -574,7 +578,7 @@ CONTACT_BODY = f"""<section class="page-head">
   <div class="wrap wrap-narrow">
     <h1>Visit us on Middle Creek Road</h1>
     <p class="lede">Seven days a week in Sevierville — between downtown and Dollywood, minutes off the Parkway, with parking out front.</p>
-    <figure class="figure"><img src="/images/storefront.webp" width="1200" height="800" fetchpriority="high" alt="The stone fireplace patio at Smoky Mountain Espresso, 1259 Middle Creek Rd, at sunset"></figure>
+    <figure class="figure"><img src="/images/storefront-facade.webp" width="1200" height="900" fetchpriority="high" alt="The Smoky Mountain Espresso and sweetFrog storefront at 1259 Middle Creek Rd, Sevierville"></figure>
   </div>
 </section>
 <section class="section">
@@ -611,6 +615,7 @@ CONTACT_BODY = f"""<section class="page-head">
         <p class="map-note">The map loads from Google when you tap the button — keeps the page fast.</p>
       </div>
     </div>
+    <figure class="figure"><img src="/images/drive-thru.webp" width="1200" height="900" loading="lazy" alt="The drive-thru lane on the sweetFrog side of the building, off Middle Creek Road"></figure>
   </div>
 </section>
 <section class="section">

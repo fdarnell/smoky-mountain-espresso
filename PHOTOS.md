@@ -26,6 +26,26 @@ at the top of `tools/enhance_photos.py`.
 | `froyo-swirl.webp` | sweetFrog swirl with PB drizzle | Home froyo badge (round, bobbing) + froyo page + marquee |
 | `beans-band.webp` | Roasted beans macro | Dark parallax band behind home reviews |
 | `espresso-bar.jpg` | Espresso bar interior | Background of the 3D cup band |
+| `storefront-facade.webp` | Front facade, both signs (AI-enhanced) | Contact page head (replaced `storefront.webp`, which is now unused but kept) |
+| `drive-thru.webp` | Drive-thru lane + building (AI-enhanced) | Contact page, map section |
+| `patio-day.webp` | Sunny patio, shade sail (AI-enhanced) | Dollywood page |
+| `patio-fireside.webp` | Patio tables by the fireplace (AI-enhanced) | About page |
+| `patio-lights.webp` | String lights over the patio (AI-enhanced) | Pigeon Forge page |
+| `froyo-room.webp` | sweetFrog dining room (AI-enhanced) | Frozen yogurt page |
+| `froyo-toppings.webp` | Self-serve toppings bar (AI-enhanced) | Frozen yogurt page |
+
+## Provenance note on the 2026-08 "AI-enhanced" batch
+
+The seven photos marked AI-enhanced above came from the owner's real shots run
+through ChatGPT image enhancement (the PNG sources in `raw-photos/` carry C2PA
+"AI-generated" content credentials; WebP conversion strips that metadata, but
+treat them as AI-processed regardless). They were hand-picked from a larger
+batch specifically because they contain **no readable regenerated text and no
+AI-rendered people**. The rejected shots from that batch (garbled menu boards,
+synthetic drinks, a fake barista) must NOT be published — if more photos from
+that source show up, zoom in on every sign and menu before using them. Fully
+synthetic scenes stay off the site, period; the real-photo set remains the
+backbone.
 
 ## Two photos deliberately not used
 

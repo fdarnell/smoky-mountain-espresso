@@ -1,0 +1,19 @@
+# The deploy root is the public web root: anything not excluded here is
+# fetchable at https://www.smokymountainespresso.com/<path>.
+
+# Build tooling and fact sources
+*.py
+tools/
+site.config.json
+
+# Internal documents and working assets (raw-photos alone is 40MB)
+raw-photos/
+screenshots/
+PHOTOS.md
+README.md
+CLIENT-HANDOFF.md
+content-plan.md
+seo-baseline/
+
+.claude/
+.DS_Store

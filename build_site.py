@@ -173,6 +173,7 @@ FOOTER = f"""</main>
   <a href="/menu/">{I_ARROW}<span>Menu</span></a>
 </div>
 <script src="/js/main.js" defer></script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 """
